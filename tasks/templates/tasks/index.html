@@ -1,0 +1,15 @@
+<!--template inheritance-->
+
+{% extends "tasks/layout.html" %}
+{% block body %}
+<h1>TASKS</h1>
+<ul>
+    {% for task in tasks %}
+        <li>{{task}}</li>
+     {% empty %}
+    <h1>No tasks</h1>
+    {% endfor %}
+
+</ul>
+<a href="add"> Add tasks</a>
+{% endblock %}
